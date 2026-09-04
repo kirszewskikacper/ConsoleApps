@@ -4,18 +4,18 @@
     {
         static void Main(string[] args)
         {
-            float[] array = GetArray(ArrayLenght());
+            float[] array = GetArray(ArrayLength());
 
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("\nTablica przed sortowaniem:\n");
             Console.ResetColor();
-            DispalyArray(array);
+            DisplayArray(array);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nTablica po sortowaniu:\n");
             Console.ResetColor();
             InsertionSort(array);
-            DispalyArray(array);
+            DisplayArray(array);
         }
 
         static float[] InsertionSort(float[] array)
@@ -42,7 +42,7 @@
             return array;
         }
 
-        static int ArrayLenght()
+        static int ArrayLength()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Podaj długoś tablicy");
@@ -62,12 +62,12 @@
                 Console.WriteLine("\nPodano błędne dane!");
                 Console.ResetColor();
                 Console.WriteLine("Podaj dowolną liczbę naturalną dodatnią\n");
-                num = ArrayLenght();
+                num = ArrayLength();
             }
             return num;
         }
 
-        static void DispalyArray(float[] array)
+        static void DisplayArray(float[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
